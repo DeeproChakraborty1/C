@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Virtual Keyboard</title>
+  <style>
+    .keyboard {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .key {
+      width: 50px;
+      height: 50px;
+      border: 1px solid #ccc;
+      text-align: center;
+      line-height: 50px;
+      font-size: 20px;
+      margin: 5px;
+      cursor: pointer;
+    }
+
+    .key:active {
+      background-color: #f0f0f0;
+    }
+  </style>
+</head>
+<body>
+  <div class="keyboard">
+    <div class="key" onclick="typeKey('Q')">Q</div>
+    <div class="key" onclick="typeKey('W')">W</div>
+    <div class="key" onclick="typeKey('E')">E</div>
+    <div class="key" onclick="typeKey('R')">R</div>
+    <div class="key" onclick="typeKey('T')">T</div>
+    <div class="key" onclick="typeKey('Y')">Y</div>
+    <div class="key" onclick="typeKey('U')">U</div>
+    <div class="key" onclick="typeKey('I')">I</div>
+    <div class="key" onclick="typeKey('O')">O</div>
+    <div class="key" onclick="typeKey('P')">P</div>
+
+    <div class="key" onclick="typeKey('A')">A</div>
+    <div class="key" onclick="typeKey('S')">S</div>
+    <div class="key" onclick="typeKey('D')">D</div>
+    <div class="key" onclick="typeKey('F')">F</div>
+    <div class="key" onclick="typeKey('G')">G</div>
+    <div class="key" onclick="typeKey('H')">H</div>
+    <div class="key" onclick="typeKey('J')">J</div>
+    <div class="key" onclick="typeKey('K')">K</div>
+    <div class="key" onclick="typeKey('L')">L</div>
+
+    <div class="key" onclick="typeKey('Z')">Z</div>
+    <div class="key" onclick="typeKey('X')">X</div>
+    <div class="key" onclick="typeKey('C')">C</div>
+    <div class="key" onclick="typeKey('V')">V</div>
+    <div class="key" onclick="typeKey('B')">B</div>
+    <div class="key" onclick="typeKey('N')">N</div>
+    <div class="key" onclick="typeKey('M')">M</div>
+  </div>
+
+  <textarea id="output"></textarea>
+
+  <script>
+    function typeKey(key) {
+      var output = document.getElementById("output");
+      output.value += key;
+    }
+  </script>
+</body>
+</html>
